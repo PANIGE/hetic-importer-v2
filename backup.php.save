@@ -1,0 +1,6 @@
+$user = $_GET["username"]
+$domain = $_GET["domain"]
+@exec("sudo bash truc.sh $user $domain");
+$filename="header('Content-Disposition: attachment; filename="'.basename($file).'"');/home/$user/backups/$domain.tar.gz";
+  header("Content-disposition: attachment;filename=$filename");
+  readfile($filename);
